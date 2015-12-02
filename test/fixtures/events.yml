@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  date: 2015-12-02 04:48:38
+  stock_count: 1
+  price: 1
+  sell_count: 1
+
+two:
+  title: MyString
+  description: MyText
+  date: 2015-12-02 04:48:38
+  stock_count: 1
+  price: 1
+  sell_count: 1

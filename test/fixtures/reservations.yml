@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  event_id: 1
+  buy_count: 1
+  payment: MyString
+
+two:
+  customer_id: 1
+  event_id: 1
+  buy_count: 1
+  payment: MyString
