@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'event/index'
+
   resources :events
   resources :reservations
   resources :customers
