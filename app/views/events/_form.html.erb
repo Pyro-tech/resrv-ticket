@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label 'イベント名' %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label '詳細情報' %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
+    <%= f.label '日程' %><br>
+    <%= f.datetime_select :date, :start_year => 2015 %>
   </div>
   <div class="field">
-    <%= f.label :stock_count %><br>
+    <%= f.label '上限枚数' %><br>
     <%= f.number_field :stock_count %>
   </div>
   <div class="field">
-    <%= f.label :price %><br>
+    <%= f.label '金額' %><br>
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :sell_count %><br>
+    <%= f.label '予約枚数' %><br>
     <%= f.number_field :sell_count %>
   </div>
   <div class="actions">

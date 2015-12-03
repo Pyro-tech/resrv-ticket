@@ -12,20 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :customer_id %><br>
+    <%= f.label 'お客様名' %><br>
     <%= f.number_field :customer_id %>
   </div>
   <div class="field">
-    <%= f.label :event_id %><br>
+    <%= f.label 'イベント名' %><br>
     <%= f.number_field :event_id %>
   </div>
   <div class="field">
-    <%= f.label :buy_count %><br>
+    <%= f.label '購入枚数' %><br>
     <%= f.number_field :buy_count %>
   </div>
   <div class="field">
-    <%= f.label :payment %><br>
-    <%= f.text_field :payment %>
+    <%= f.label 'お支払方法' %><br>
+    <%= f.select(:payment, options_for_select(["現金", "銀行振込", "クレジットカード"])) %>
   </div>
   <div class="actions">
     <%= f.submit %>
