@@ -47,7 +47,6 @@ end
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
-gem 'will_paginate'
 gem 'annotate'
 gem 'thin'
 gem 'rails-erd'
