@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'list/index'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'event/index'
@@ -60,4 +62,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root to:'list#index', as:'list'
 end
