@@ -1,2 +1,10 @@
 <h1>List#index</h1>
 <p>Find me in app/views/list/index.html.erb</p>
+
+<h1>イベント情報一覧</h1>
+<% @eventlists.each do |eventlist| %>
+    <h2><%= eventlist.title %></h2>
+    <p>イベント内容：<%= sanitize(eventlist.description) %></p><br>
+    <p>開催日時：<%= eventlist.date %></p>
+    <p>金額：<%= number_to_currency(eventlist.price, :unit => "￥", :precision => 0) %></p>
+<% end %>
