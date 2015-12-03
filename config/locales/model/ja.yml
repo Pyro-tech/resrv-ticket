@@ -1,0 +1,40 @@
+ja:
+  activerecord:
+    models:
+      admin_user: 管理者
+      comment: コメント
+      name: 名前
+
+      customer: 顧客
+      event: イベント
+      reservation: 予約
+
+    attributes:
+      admin_user:
+        email: メールアドレス
+        current_sign_in_at: 最新ログイン日時
+        sign_in_count: ログイン回数
+        created_at: 作成日時
+      name:
+        name: 名前
+        date: 日付
+        created_at: 作成日時
+        updated_at: 更新日時
+
+      customer:
+        name: 顧客名
+        tel: 電話番号
+        address: 住所
+        email: メールアドレス
+      event:
+        title: タイトル
+        description: 説明
+        date: 開催日
+        stock_count: 発行数
+        price: 価格
+        sell_count: 販売数
+      reservation:
+        customer_id: 顧客ID
+        event_id: イベントID
+        buy_count: 購入数
+        payment: 支払方法
