@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  has_many :reservations
+
   validates :title, presence: true
   validates :description, presence: true
   validates :date, presence: true
