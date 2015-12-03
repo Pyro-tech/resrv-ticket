@@ -13,5 +13,21 @@ ActiveAdmin.register Customer do
 #   permitted
 # end
 
+permit_params :name, :tel, :address, :email
+
+  index do
+    selectable_column
+    id_column
+    column :name
+    column :tel
+    column :address
+    column :email
+    actions
+  end
+
+  filter :name
+  filter :tel
+  filter :address
+  filter :email
 
 end
