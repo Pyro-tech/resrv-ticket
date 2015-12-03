@@ -1,32 +1,32 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>イベント名:</strong>
   <%= @event.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>詳細情報:</strong>
   <%= @event.description %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>日程:</strong>
   <%= @event.date %>
 </p>
 
 <p>
-  <strong>Stock count:</strong>
+  <strong>上限枚数:</strong>
   <%= @event.stock_count %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @event.price %>
+  <strong>金額:</strong>
+  <%= number_to_currency(@event.price, :unit => "￥", :precision => 0) %>
 </p>
 
 <p>
-  <strong>Sell count:</strong>
+  <strong>予約枚数:</strong>
   <%= @event.sell_count %>
 </p>
 
