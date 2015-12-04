@@ -30,5 +30,5 @@
   <%= @event.sell_count %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<p><%= button_to 'イベント一覧へ戻る', list_path, method: :get %></p>
+<p><%= button_to '申込ページへ', new_customer_path, method: :get %></p>
