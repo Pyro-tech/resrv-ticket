@@ -1,13 +1,103 @@
-<h1>List#index</h1>
-<p>Find me in app/views/list/index.html.erb</p>
+<link rel="stylesheet" type="text/css" href="style.css" id="mystyle">
 
-<h1>イベント情報一覧</h1>
-<hr>
-<% @eventlists.each do |eventlist| %>
-    <h2><%= eventlist.title %></h2>
-    <p>イベント内容：<%= sanitize(eventlist.description) %></p>
-    <p>開催日時：<%= eventlist.date %></p>
-    <p>金額：<%= number_to_currency(eventlist.price, :unit => "円", :precision => 0) %></p>
-    <%= button_to '詳細・申込ページへ', event_path(eventlist.id), method: :get %>
-    <hr>
-<% end %>
+<script src="https://dzpp79ucibp5a.cloudfront.net/assets/www-40623f933e5adec936dfab1ee5dccde8e3c72f458d9a09d6be63d199ea2ba60e.js" async="async"></script>
+<div class="navbar navbar-static-top navbar-inverse full-min-width">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="https://www.doorkeeper.jp/" class="brand doorkeeper"><img width="194" height="29" src="" alt="インデックス"></a>
+      <a data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a><!--
+      <div class="container nav-collapse">
+        <ul class="nav pull-right">
+          <li><a href="">新規登録</a></li>
+          <li><a href="">ログイン</a></li>
+        </ul>
+      </div>
+    -->
+  </div>
+</div>
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="page-header">
+          <h1>イベント情報一覧</h1>
+        </div>
+        <hr>
+        <% @eventlists.each do |eventlist| %>
+        <div class="infinite-scroll">
+          <div class="content event-list">
+            <h5>開催日時：<time itemprop="startDate" datetime=""><%= eventlist.date.to_s %></time></h5>
+            <div itemtype="" itemscope="" class="row-fluid event-listed">
+              <div class="span11">
+                <h2><%= eventlist.title %></h2>
+              </div>
+            </div>
+            <p class="large">イベント内容：<%= sanitize(eventlist.description) %></p>
+            <p itemtype="" itemscope="" itemprop="location">
+              <span itemprop="address" class="muted">金額：<%= number_to_currency(eventlist.price, :unit => "円", :precision => 0) %></span>
+              <%= button_to '詳細・申込ページへ', event_path(eventlist.id), method: :get %>
+            </p>
+            <hr>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <div class='container'>
+    <div class='row'>
+      <div class='span3'>
+        <h4>チケット予約サイト</h4>
+        <ul class='unstyled'>
+          <li><a href="">料金</a></li>
+          <li><a href="">会社概要</a></li>
+          <li><a href="">ヘルプ</a></li>
+        </li>
+      </ul>
+    </div>
+    <div class='span3'>
+      <h4>リソース</h4>
+      <ul class='unstyled'>
+        <li><a href="">イベント企画</a></li>
+        <li><a href="">会場</a></li>
+        <li><a href="">API</a></li>
+        <li><a href="">イベント一覧</a></li>
+      </ul>
+    </div>
+    <div class='span3'>
+      <h4>ポリシー</h4>
+      <ul class='unstyled'>
+        <li><a href="">利用規約</a></li>
+        <li><a href="">プライバシーポリシー</a></li>
+        <li><a href="">セキュリティ</a></li>
+        <li><a href="">特定商取引法に基づく表記</a></li>
+      </ul>
+    </div>
+    <div class='span3'>
+      <h4>最新情報</h4>
+      <ul class='unstyled'>
+        <li>
+          <a href="https://www.facebook.com/"><i class='icon-facebook'></i>
+            Facebook
+          </a></li>
+          <li>
+            <a href="https://twitter.com/"><i class='icon-twitter'></i>
+              Twitter
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  <script>
+
+</script>
