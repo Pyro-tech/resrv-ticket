@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: reservations
+#
+#  id          :integer          not null, primary key
+#  customer_id :integer
+#  event_id    :integer
+#  buy_count   :integer
+#  payment     :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Reservation < ActiveRecord::Base
   PAYMENT_TYPES = [ "現金", "銀行振込", "クレジットカード" ]
 

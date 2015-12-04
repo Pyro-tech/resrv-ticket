@@ -1,4 +1,6 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
 
 <p>
   <strong>お名前：</strong>
@@ -20,5 +22,7 @@
   <%= @customer.email %>
 </p>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<%#= link_to 'Edit', edit_customer_path(@customer) %>
+<%#= link_to 'Back', customers_path %>
+<p><%= button_to '予約入力へ', new_reservation_path, method: :get %><p>
+<p><%= button_to 'イベント一覧へ戻る', list_path, method: :get %><p>
