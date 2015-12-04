@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :events,       only: [:show]
-  resources :reservations, only: [:show, :new, :create, :edit, :update]
-  resources :customers,    only: [:show, :new, :create, :edit, :update]
+  resources :reservations, only: [:show, :new, :create]
+  resources :customers,    only: [:show, :new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
