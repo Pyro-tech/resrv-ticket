@@ -5,7 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+# AdminUser.create!(:email => 'admin@example.com', :password => 'password')
+AdminUser.delete_all
 Customer.delete_all
 Event.delete_all
 Reservation.delete_all
@@ -161,6 +162,7 @@ Event.create([
     date: '2015-12-20',
     price: 5500,
     stock_count: 100,
+    sell_count: 0
   },
   {
     id: 2,
@@ -169,6 +171,7 @@ Event.create([
     date: '2015-12-25',
     price: 9800,
     stock_count: 100,
+    sell_count: 0
   },
   {
     id: 3,
@@ -177,6 +180,7 @@ Event.create([
     date: '2016-1-15',
     price: 12000,
     stock_count: 150,
+    sell_count: 0
   },
   {
     id: 4,
@@ -185,6 +189,7 @@ Event.create([
     date: '2016-2-19',
     price: 6200,
     stock_count: 90,
+    sell_count: 0
   },
   {
     id: 5,
@@ -193,6 +198,7 @@ Event.create([
     date: '2016-2-28',
     price: 6800,
     stock_count: 80,
+    sell_count: 0
   }
 ])
 
