@@ -31,13 +31,13 @@
         <div class="infinite-scroll">
           <div class="content event-list">
             <h5>開催日時：<time itemprop="startDate" datetime=""><%= eventlist.date.to_s %></time></h5>
-            <div itemtype="http://data-vocabulary.org/Event" itemscope="" class="row-fluid event-listed">
+            <div itemtype="" itemscope="" class="row-fluid event-listed">
               <div class="span11">
                 <h2><%= eventlist.title %></h2>
               </div>
             </div>
             <p class="large">イベント内容：<%= sanitize(eventlist.description) %></p>
-            <p itemtype="http://data-vocabulary.org/Organization" itemscope="" itemprop="location">
+            <p itemtype="" itemscope="" itemprop="location">
               <span itemprop="address" class="muted">金額：<%= number_to_currency(eventlist.price, :unit => "円", :precision => 0) %></span>
               <%= button_to '詳細・申込ページへ', event_path(eventlist.id), method: :get %>
             </p>
@@ -52,11 +52,10 @@
 </div>
 </div>
 
-<footer class='full-min-width'>
   <div class='container'>
     <div class='row'>
       <div class='span3'>
-        <h4></h4>
+        <h4>チケット予約サイト</h4>
         <ul class='unstyled'>
           <li><a href="">料金</a></li>
           <li><a href="">会社概要</a></li>
@@ -97,10 +96,8 @@
         </div>
       </div>
     </div>
-  </footer>
 
 
   <script>
 
 </script>
-</body>
