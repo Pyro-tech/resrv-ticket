@@ -20,5 +20,7 @@
   <%= @reservation.payment %>
 </p>
 
-<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
-<%= link_to 'Back', reservations_path %>
+<%#= link_to 'Edit', edit_reservation_path(@reservation) %>
+<%#= link_to 'Back', reservations_path %>
+
+<%= button_to 'イベント一覧へ戻る', list_path, method: :get %>
