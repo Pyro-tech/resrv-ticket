@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get 'list/index'
+  root 'list#index'
+  get 'list/index' => redirect("/")
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'list/index'
 
-  resources :events
-  resources :reservations
-  resources :customers
+  resources :events,       only: [:show]
+  resources :reservations, only: [:show, :new, :create, :edit, :update]
+  resources :customers,    only: [:show, :new, :create, :edit, :update]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
