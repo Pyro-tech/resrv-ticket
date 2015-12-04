@@ -14,7 +14,7 @@ module ActiveAdmin
 
         div do
 
-          small "株式会社名 #{Date.today.year}"
+          small "チケット予約サイト #{Date.today.year}"
 
         end
 
