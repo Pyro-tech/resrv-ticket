@@ -13,29 +13,18 @@ ActiveAdmin.register_page "Dashboard" do
     # Here is an example of a simple dashboard with columns and panels.
 
     columns do
-      column do
-        panel "イベント" do
-          ul do
-            Event.all.map do |e|
-              li do
-                span link_to(e.title, admin_event_path(e))
-                span e.date
-              end
-            end
+      panel "予約（最新10件）" do
+        table_for Reservation.order("id desc").limit(10) do
+          column "予約ID" do |r|
+              link_to(r.id, admin_reservation_path(r.id))
           end
-        end
-      end
-
-      column do
-        panel "予約" do
-          ul do
-            Reservation.all.map do |r|
-              li do
-                span link_to(r.customer.name, admin_customer_path(r.customer.id))
-                span r.event.title
-              end
-            end
+          column "予約者名" do |r|
+              link_to(r.customer.name, admin_customer_path(r.customer.id))
           end
+          column "タイトル" do |r|
+              link_to(r.event.title, admin_event_path(r.event.id))
+          end
+          column :buy_count
         end
       end
     end
