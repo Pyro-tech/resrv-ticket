@@ -17,7 +17,8 @@
   </div>
   <div class="field">
     <%= f.label 'イベント名' %><br>
-    <%= f.number_field :event_id %>
+    <%#= f.number_field :event_id %>
+    <%= f.collection_select(:event_id, Event.all, :id, :title) %>
   </div>
   <div class="field">
     <%= f.label '購入枚数' %><br>
