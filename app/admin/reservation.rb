@@ -15,7 +15,7 @@ ActiveAdmin.register Reservation do
 # end
 
 permit_params :customer_id, :event_id, :buy_count, :payment
-payment_list = { "現金": "現金", "振込": "振込", "クレジットカード": "クレジットカード" }.invert
+payment_list = { 現金: '現金', 振込: '振込', クレジットカード: 'クレジットカード' }.invert
 
   index title: I18n.t('activerecord.models.reservation') + '一覧' do
     selectable_column
