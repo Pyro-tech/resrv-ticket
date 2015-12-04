@@ -2,9 +2,12 @@
 <p>Find me in app/views/list/index.html.erb</p>
 
 <h1>イベント情報一覧</h1>
+<hr>
 <% @eventlists.each do |eventlist| %>
     <h2><%= eventlist.title %></h2>
-    <p>イベント内容：<%= sanitize(eventlist.description) %></p><br>
+    <p>イベント内容：<%= sanitize(eventlist.description) %></p>
     <p>開催日時：<%= eventlist.date %></p>
-    <p>金額：<%= number_to_currency(eventlist.price, :unit => "￥", :precision => 0) %></p>
+    <p>金額：<%= number_to_currency(eventlist.price, :unit => "円", :precision => 0) %></p>
+    <%= button_to '詳細・申込ページへ', event_path(eventlist.id), method: :get %>
+    <hr>
 <% end %>

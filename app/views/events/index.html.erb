@@ -22,7 +22,7 @@
         <td><%= event.description %></td>
         <td><%= event.date %></td>
         <td><%= event.stock_count %></td>
-        <td><%= number_to_currency(event.price, :unit => "￥", :precision => 0) %></td>
+        <td><%= number_to_currency(event.price, :unit => "円", :precision => 0) %></td>
         <td><%= event.sell_count %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
